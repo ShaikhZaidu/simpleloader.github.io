@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.loading{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.loading .box{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    left: 50%;
+    transform: rotate(calc(24deg * var(--i)));
+    transform-origin: 0 50px;
+    animation: round 1.9s ease-in-out infinite;
+    animation-delay: calc(0.05s * var(--i));
+ 
+}
+@keyframes round{
+    0%,50%{
+        background: white;
+        box-shadow: none;
+    }
+    50.1%,100%{
+        background: rgb(255, 0, 0);
+        box-shadow: none;
+    }
+}
